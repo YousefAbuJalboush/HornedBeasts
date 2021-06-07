@@ -1,3 +1,21 @@
+# HornedBeasts
+
+## Display images
+
+* Number and name of feature: Display images
+* Estimate of time needed to complete: 20min
+* Start time: 2:40pm
+* Finish time: 3:15pm
+* Actual time needed to complete: 35min
+
+## Allow users to vote for their favorite beast
+
+* Number and name of feature: Allow users to vote for their favorite beast
+* Estimate of time needed to complete: 60min
+* Start time: 3:20pm
+* Finish time: 4:40pm
+* Actual time needed to complete: 80min
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
