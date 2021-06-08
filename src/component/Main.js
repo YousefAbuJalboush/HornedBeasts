@@ -2,10 +2,11 @@ import React from 'react';
 import HornedBeasts from './HornedBeasts.js';
 import hornedBeasts from './data.json';
 
+
 class Main extends React.Component {
 
     render() {
-    
+      
         return (
             <div>
 
