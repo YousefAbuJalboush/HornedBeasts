@@ -16,6 +16,16 @@
 * Finish time: 4:40pm
 * Actual time needed to complete: 80min
 
+## Display a Modal
+
+* Number and name of feature: Display a Modal
+* Estimate of time needed to complete: 60min
+* Start time: 2:00pm
+* Finish time: 1:am
+* Actual time needed to complete: 150min
+
+### Note : I started working on lap at lap time but had some problems with my code, I took a break and finished working in the middle of the night.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
