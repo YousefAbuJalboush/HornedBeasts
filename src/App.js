@@ -7,12 +7,28 @@ import Main from './component/Main';
 import hornedBeasts from './component/data.json';
 
 class App extends React.Component {
+
+  constructor(props){
+    super(props)
+    this.state={
+      data : hornedBeasts
+    }
+  }
+
+  FilteredHorns = (filterHorns) =>{
+    this.setState ({
+      data: filterHorns
+
+    })
+  }
+
   render() {
     return (
       <div>
         <Header />
         <Main
-          hornedBeasts={hornedBeasts}
+          FilteredHorns={this.FilteredHorns}
+          data={this.state.data}
         />
         <Footer />
       </div>

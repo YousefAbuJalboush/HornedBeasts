@@ -1,6 +1,7 @@
 import React from 'react';
 import SelectedBeast from './SelectedBeast';
 
+
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
 import ListGroupItem from 'react-bootstrap/ListGroupItem'
@@ -39,6 +40,7 @@ class HornedBeasts extends React.Component {
 
     return (
       <>
+
         <Card style={{ width: '18rem', margin: '1rem' }}>
           <Card.Img variant="top" onClick={this.setVotes} src={this.props.imageUrl} alt={this.props.keyword} />
           <Card.Body>
