@@ -26,6 +26,14 @@
 
 ### Note : I started working on lap at lap time but had some problems with my code, I took a break and finished working in the middle of the night.
 
+## Filter by Numbers of Horns
+
+* Number and name of feature:  Filter by Numbers of Horns
+* Estimate of time needed to complete: 80min
+* Start time: 12:30am
+* Finish time: 2:00am
+* Actual time needed to complete: 90min
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
