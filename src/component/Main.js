@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import hornedBeasts from './data.json';
+// import hornedBeasts from './data.json';
 
 
 import Container from 'react-bootstrap/Container'
@@ -15,7 +15,7 @@ class Main extends React.Component {
                 <Container>
                     <Row>
                         {
-                            hornedBeasts.map((beast) => {
+                            this.props.hornedBeasts.map((beast) => {
                                 return (
 
                                     <HornedBeasts
