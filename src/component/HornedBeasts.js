@@ -1,68 +1,45 @@
 import React from 'react';
-import SelectedBeast from './SelectedBeast';
-
 import Card from 'react-bootstrap/Card'
-import ListGroup from 'react-bootstrap/ListGroup'
-import ListGroupItem from 'react-bootstrap/ListGroupItem'
+import Button from 'react-bootstrap/Button'
+// import SelectedBeast from './SelectedBeast';
 
-
-
-
-class HornedBeasts extends React.Component {
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      Votes: 0,
-      show: false
+class HornedBeast extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            countVotes: 0,
+        }
     }
-  }
 
-  setVotes = () => {
-    let numOfVotes = this.state.Votes;
-    this.setState({
-      Votes: numOfVotes += 1
-    })
-    this.modalShow();
-  }
+    voting = () => {
+        let value = this.state.countVotes;
+        this.setState({ 
+            countVotes: value += 1 })
+    
+    }
 
-  modalShow = () => {
-    this.setState({ show: true });
-  };
+    displayModal = ()=>{
+        this.props.displayModal(this.props.title)
+    }
 
-  modalClose = () => {
-    this.setState({ show: false });
-  };
+    render() {
+        return (
+            <>
 
-  render() {
+                <Card style={{ width: '18rem' }} onClick={this.displayModal}>
+                    <Card.Img variant="top" src={this.props.img} onClick={this.voting} />
+                    <Card.Body>
+                        <Card.Title> {this.props.title}</Card.Title>
+                        <Card.Text> {`❤️ ` + this.state.countVotes}</Card.Text>
+                        <Card.Text> {this.props.description}</Card.Text>
+                        <Button variant="primary">Go somewhere</Button>
 
-    return (
-      <>
-        <Card style={{ width: '18rem', margin: '1rem' }}>
-          <Card.Img variant="top" onClick={this.setVotes} src={this.props.imageUrl} alt={this.props.keyword} />
-          <Card.Body>
-            <Card.Title>{this.props.title}</Card.Title>
-            <Card.Text>
-              {this.props.description}
-            </Card.Text>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroupItem> Horns : {this.props.horns}</ListGroupItem>
-            <ListGroupItem> ❤️ :  {this.state.Votes}</ListGroupItem>
-          </ListGroup>
-        </Card>
-
-        <SelectedBeast
-          show={this.state.show}
-          modalClose={this.modalClose}
-          title={this.props.title}
-          description={this.props.description}
-          imageUrl={this.props.imageUrl}
-          horns={this.props.horns}
-        />
-      </>
-    );
-  }
+                      
+                    </Card.Body>
+                </Card>
+                </>     
+        );
+    }
 }
-export default HornedBeasts;
+
+export default HornedBeast;
